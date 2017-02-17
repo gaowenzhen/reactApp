@@ -1,0 +1,73 @@
+/*
+gaowenzhen@msn.com
+
+*/
+
+$primary-color: #fff;
+$font-color: #000;
+
+body {
+  background-color: $primary-color;
+}
+
+h1 {
+  color: $font-color;
+}
+
+@media only screen and (min-width: 960px){
+	.flow-text {
+    font-size: 1.2rem;
+   }
+}
+
+@media only screen and (min-width: 930px){
+   .flow-text {
+    font-size: 1.376rem;
+   }
+}
+
+@media only screen and (min-width: 900px){
+ .flow-text {
+    font-size: 1.352rem;
+   }
+}
+
+@media only screen and (min-width: 870px){
+  .flow-text {
+    font-size: 1.328rem;
+   }
+}
+
+@media only screen and (min-width: 840px){
+  .flow-text {
+    font-size: 1.304rem;
+   }
+}
+
+@media only screen and (min-width: 810px){
+ .flow-text {
+    font-size: 1.28rem;
+   }
+}
+
+@media only screen and (min-width: 780px){
+.flow-text {
+    font-size: 1.256rem;
+   }
+}
+
+@media only screen and (min-width: 750px){
+.flow-text {
+    font-size: 1.232rem;
+   }
+}
+
+@media only screen and (min-width: 720px){
+.flow-text {
+    font-size: 1.208rem;
+   }
+}
+/*小写*/
+.tabs .tab{
+	text-transform: none;
+}
