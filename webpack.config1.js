@@ -1,13 +1,21 @@
 var path = require('path')
 var webpack = require('webpack')
 
+
 module.exports = {
     entry: './src',
     output: {
         //打包时主路径
         path: path.join(__dirname, 'public'), 
+        //配置url-loader name的父路径
         publicPath:'/public/',
         filename: 'bundle.js'
+    },
+    //分出，不打入包的模块
+    externals:{
+        'react':'react',
+        'react-router':'react-router',
+        'redux':'redux'
     },
     devServer: {
         inline: true,
@@ -15,14 +23,10 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            _VERSION_: JSON.stringify("1.0.0")
-        }),
-        new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             }
-        }),
-        new webpack.optimize.DedupePlugin()
+        })
     ],
     module: {
         loaders: [{

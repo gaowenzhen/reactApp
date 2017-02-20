@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom'
+//import ReactDOM from 'react-dom'
 
 export default class Reactbasis extends React.Component {
 
@@ -76,7 +76,7 @@ export default class Reactbasis extends React.Component {
         </blockquote>
         <ol>
             <li>本地必须安装nodejs</li>
-            <li><a href="#">2,源码下载</a></li>
+            <li><a href="https://github.com/gaowenzhen/reactApp">源码下载</a></li>
             <li>在cmd下安装如下</li>
         </ol>
         <dl>
@@ -299,7 +299,7 @@ export default class Reactbasis extends React.Component {
             <code className="language-javascript">
             {`
   
-//注意：this.props.data          
+//注意：this.props.data --这是从组件属性里接回数据         
 class TableRow extends React.Component {
    render() {
       return (
@@ -312,7 +312,7 @@ class TableRow extends React.Component {
    }
 }
 
- //注意如下：
+ //如下：
          import React from 'react';
              class App extends React.Component {             
              render() {
@@ -383,15 +383,18 @@ class TableRow extends React.Component {
                      data: '输入框例子...'
                   }
                   this.updateState = this.updateState.bind(this);
-                  //ref 和 refs用法
+                  
                   this.clearInput = this.clearInput.bind(this);
                };
                updateState(e) {
+                  //这里没有用ref直接用event里的target
                   this.setState({data: e.target.value});
                }               
                //修改焦点
                 clearInput() {
                     this.setState({data: ''});
+                    //ref和refs
+                    //在dom属性上写过ref在这里用 refs读回dom
                     ReactDOM.findDOMNode(this.refs.myInput).focus();
                  }
                render() {

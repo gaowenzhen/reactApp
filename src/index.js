@@ -16,6 +16,7 @@ import R_router from './Router.jsx';
 import Higherorder from './Higherorder.jsx';
 import Fluxcont from './Flux.jsx';
 
+ 
 
 ReactDOM.render(
  <Router history = {browserHistory}>
@@ -25,7 +26,7 @@ ReactDOM.render(
          <Route path = "Props" component = {Props} />
          <Route path = "R_router" component = {R_router} />
          <Route path = "Higherorder" component = {Higherorder} />
-         <Route path = "Fluxcont" component = {Fluxcont} />        
+         <Route path = "Fluxcont" component = {Fluxcont} />
       </Route>
    </Router>
 	, document.getElementById('app'))

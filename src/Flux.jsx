@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
 //这里要用redux ---set---
 import { createStore } from 'redux';
@@ -141,7 +141,8 @@ class FluxCont extends React.Component {
             import { connect } from 'react-redux'
             class Index extends Component {
              render() { 
-             //这里能取出--visibleTodos相当于state.todos 
+             //这里能取出--visibleTodos相当于state.todos
+             //请看这个程序底部有select定义 
              const { dispatch, visibleTodos } = this.prop;
              var action1 = { type: 'plus' };
                 return (
@@ -150,6 +151,9 @@ class FluxCont extends React.Component {
                         写入--触发，思路如这里加了click
                         那action1就不停的变化，那输出也不停的变化
                         改变main.jsx内Handlenumbers--state
+                        也就是只要修改了state.todos内的数据，界面就自动
+                        刷新，就是控制数据就达到控制界面包括事件处理的方法，也可以被
+                        放入state.todos内，就看你有多宏的思想就能开发出高大上应用。
                         </h5>
                         {dispatch(action1)}
                         <hr/>
@@ -163,7 +167,7 @@ class FluxCont extends React.Component {
                }
              }
 
-            //主页这里的导出用了connect
+            //这里的导出用了connect
             //把state.todos给visibleTodos
             function select(state) {
              return {

@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
-import { Link } from "react-router";
-const topstyle="";
+import React from 'react'
+//import ReactDOM from 'react-dom'
+import { Link } from "react-router"
+
 
 import Footer from './footer.jsx';
 import Topnav from './topnav.jsx';
@@ -15,13 +15,6 @@ class App extends React.Component {
     super(props);
   
    }
-
-   //写在构造函数外
-   reupdateState(e) {
-     
-       
-   }  
- 
 
 
    render() {
